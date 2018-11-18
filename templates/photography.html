@@ -1,0 +1,11 @@
+{% extends "template.html"%}
+{% block content %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="about">
+{% for index, val in photos.items() %}
+     <div class="my-auto">
+        <img src="{{url_for('send_image', filename=index)}}" width="{{photos[index].width}}" height="{{photos[index].height}}"/>
+         <p class="lead mb-5"></p>
+     </div>
+{% endfor %}
+</section>
+{% endblock %}
