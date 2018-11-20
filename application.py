@@ -10,12 +10,14 @@ application.config['SECRET_KEY'] = os.urandom(32)
 photos_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "static", "photos", "photography")
 design_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "static", "photos", "design")
 
+
 @application.route("/")
 def home():
     photos_display = return_preview_photos(photos_dir, "photography")
     #design_display = return_preview_photos(design_dir)
     design_display = {}
     return render_template("home.html", photos=photos_display, design=design_display)
+
 
 @application.route('/photography')
 def photography():
