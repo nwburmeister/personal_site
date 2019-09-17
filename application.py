@@ -25,6 +25,13 @@ def photography():
     return render_template('photography.html', photos=photos_display)
 
 
+@application.route('/blog')
+def blog():
+    pass
+
+    return render_template('blog.html')
+
+
 @application.route('/<filename>')
 def send_image(filename):
     return send_from_directory('photos', filename)
