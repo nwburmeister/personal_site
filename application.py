@@ -4,6 +4,7 @@ import os
 import random
 from PIL import Image
 
+
 application = Flask(__name__)
 application.config['SECRET_KEY'] = os.urandom(32)
 
@@ -28,8 +29,12 @@ def photography():
 @application.route('/blog')
 def blog():
     pass
-
     return render_template('blog.html')
+
+
+@application.route('/javascript')
+def javascript():
+    return render_template('javascript.html')
 
 
 @application.route('/<filename>')
