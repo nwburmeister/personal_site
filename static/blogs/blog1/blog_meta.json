@@ -1,0 +1,6 @@
+{
+  "title": "This is the first blog title",
+  "date": "12-22-2019",
+  "subtitle": "Some spicy text as a subtitle. We want to make it less than 75 characters or something.",
+  "blog_image": "/static/blogs/blog1/rp.jpg"
+}

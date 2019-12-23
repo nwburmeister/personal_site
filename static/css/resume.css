@@ -216,3 +216,15 @@ a:hover, a:focus, a:active {
 
 
 }
+
+divider{
+   top: 0px;
+   margin:0px;
+   padding: 0px 2px 2px 3px;
+   border-width: 2px;
+   border-bottom-width: 10px;
+   border-bottom-color: red;
+   border-bottom-style: solid;
+   width: 100%;
+
+}

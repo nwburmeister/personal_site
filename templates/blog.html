@@ -1,9 +1,27 @@
 {% extends "template.html"%}
 {% block content %}
-<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="blog">
-    <h3>Welcome</h3>
-    <h4>{Todays Date}</h4>
-    <p></p>
+<div class="resume-section p-3 p-lg-5 d-flex flex-column" style="padding-bottom: 0 !important;">
+    <div style="my-auto">
+        <div style="width: 100%; border-bottom: 3.5px solid red;">
+            <h3>My Thoughts on This and That</h3>
+        </div>
+    </div>
+</div>
 
+{% for blog in blogs.keys() %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+    <div style="width: 100%; height:100%; border: 1px solid red;">
+        <a href="{{blogs[blog]['redirect']}}" style="text-decoration : none">
+            <img src="{{blogs[blog]['blog_image']}}" class="img-fluid">
+            <br>
+            <br>
+            <h2>{{blogs[blog]['title']}} | <span>{{blogs[blog]['date']}}</span></h2>
+            <p>{{blogs[blog]['subtitle']}}</p>
+        </a>
+
+
+    </div>
 </section>
+{% endfor %}
+
 {% endblock %}

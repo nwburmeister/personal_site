@@ -1,0 +1,54 @@
+{% extends "template.html"%}
+{% block content %}
+
+<style>
+h1 {
+    text-transform: none;
+    font-family: Arial;
+}
+h2 {
+
+
+}
+h3 {
+    text-transform: none;
+    font-size: 100%;
+    font-family: Arial;
+}
+h4 {
+    text-transform: none;
+}
+h5 {
+    text-transform: none;
+    font-family: Arial;
+}
+h6 {
+    text-transform: none;
+    font-family: Arial;
+}
+
+</style>
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+    <div style="width: 85%; height:100%; border: 1px solid red;">
+        <img src="{{blog['blog_image']}}" class="img-fluid">
+        <div style="padding-left: 1%;">
+            <h2>{{blog['title']}}</h2>
+            <h4>{{blog['date']}} </h4>
+            <br>
+
+            <div style="font-family: Arial; color: gray; padding-bottom:5%;">
+                {{blog['subtitle']}}
+            </div>
+        </div>
+
+
+        <div style="font-family: Arial; color: black">
+            {{ blog['content'] | safe }}
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
