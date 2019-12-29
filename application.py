@@ -48,7 +48,6 @@ def blog_post(id):
         blogs = get_blogs()
         blog = blogs[id]
 
-
     return render_template('blog_post.html', blog=blog)
 
 
